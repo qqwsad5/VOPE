@@ -2,6 +2,22 @@
 
 VOPE is a recheck-based evaluation protocol for assessing hallucinations in Large Vision-Language Models (LVLMs) on **voluntary imagination tasks** (e.g., story writing), where models are expected to generate novel content beyond the given image — a setting largely overlooked by existing hallucination benchmarks.
 
+## Data Preparation
+
+Download the [MSCOCO 2014](https://cocodataset.org/#download) validation images and place the `val2014/` folder under `./data/`:
+
+```
+VOPE/
+└── data/
+    ├── val2014/
+    │   ├── COCO_val2014_000000000042.jpg
+    │   └── ...
+    ├── Generative/
+    └── ReCheck/
+```
+
+Then update `dataset_root` in `evaluation.py` if needed (default is `./data`).
+
 ## Usage
 
 ### Step 1: Run the generative task

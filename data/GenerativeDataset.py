@@ -20,7 +20,7 @@ class GenerativeDataset(BaseDataset):
 
         # Add data_root prefix to image paths
         for idx in range(self.num_samples):
-            self.data[idx]['images'] = os.path.join(self.data_root, self.data[idx]['images'][0])
+            self.data[idx]['images'] = os.path.join(self.data_root, 'val2014', self.data[idx]['images'][0])
 
         self.get_double_word_dict()
 
