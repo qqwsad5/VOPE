@@ -1,0 +1,9 @@
+chair_num=0.001
+chair_score=0
+safe_cover_num=0.001
+safe_cover_score=0
+non_hallu_score=0
+non_hallu_num=0.001
+avg_out_len=0
+avg_filt_rate=0
+gen_num=0
