@@ -67,6 +67,25 @@ python evaluation.py
 
 The final VOPE metrics (`hal_d`, `hal_i`, `exp`) will be saved to `./results/recheck_generative_captioning/<model_name>_metrics.json`.
 
+### Step 4: Run the relevance evaluation (optional)
+
+First, generate the label file from the recheck results:
+
+```bash
+cd rel_eval
+python gen_eval_label.py
+```
+
+This produces `rel_eval/generative_captioning/<model_name>.json` containing the objects to be scored.
+
+Then fill in your OpenAI API key and the required paths in `gpt_eval.py`, and run:
+
+```bash
+python gpt_eval.py
+```
+
+This uses GPT-4o to score the relevance between each object and the image. Results will be saved to `<save_root>/gpt_eval_<dataset>/<model_name>_results.json`.
+
 ## License
 
 This benchmark is released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).

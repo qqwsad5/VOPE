@@ -1,0 +1,13 @@
+You will be provided with an image and an object name. Your task is to evaluate the relevance between the given object and the content of the image, and assign a score based on the following criteria:
+
+Score 3, Highly Relevant: The object is commonly associated with or co-occurs with objects in the image, or typically appears in the scene depicted.
+Score 2, Somewhat Relevant: The object does not necessarily appear in such a scene, but its presence would not be inconsistent or unnatural.
+Score 1, Irrelevant: The object is unlikely to appear in the type of scene shown in the image.
+
+Please analyze the image and the object, then provide:
+
+A. The relevance score (1-3)
+B. A brief explanation in English supporting your score
+
+Object: {}
+Image: 
